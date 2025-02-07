@@ -38,6 +38,9 @@ eliminame.forEach((element) => element.remove())
 let nuevoP5 = document.createElement('p')
 let textoP3 = document.createTextNode('Voy en medio!')
 nuevoP5.appendChild(textoP3)
+let divs = document.querySelectorAll('div:not([class])')
+let segundoDiv = divs[1]
+segundoDiv.parentNode.insertBefore(nuevoP5, segundoDiv)
 // 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase.fn-insert-here
 let insertarTexto = document.querySelectorAll('div.fn-insert-here')
 insertarTexto.forEach((element) => {
